@@ -1,0 +1,23 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Example App</title>
+        <link rel="stylesheet" href="{{ url_for('bio_blueprint.static', filename='styles.css') }}">
+        <script src="{{ url_for('bio_blueprint.static', filename='script.js') }}"></script>
+    </head>
+    <body>
+    
+        <main>
+            <div class="image-container">
+                <img id="example-image" src="https://cdn-media-1.freecodecamp.org/images/RooSvbKlAWsOjkz8JPactXH-GPf4Pe6DC3Ue" alt="Example Image">
+            </div>
+        </main>
+    </body>
+    </html>
+{% endblock %}
+

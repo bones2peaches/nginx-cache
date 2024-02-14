@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  nginx:
+    container_name: cache-nginx
+    build: ./nginx
+    ports:
+      - "443:443"
+      - "80:80"
+    volumes:
+      - /etc/letsencrypt/archive/cache.bones2peaches.com:/etc/nginx/certs
+
+  flask:
+    container_name: frontend
+    build: ./app
+    ports:
+      - "5000:5000"
+
